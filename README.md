@@ -1,3 +1,1 @@
-// Factory Method для створення об'єктів погоди:
-
-add testing branch
+Factory Method для створення об'єктів погоди:
