@@ -1,0 +1,37 @@
+@startuml
+set namespaceSeparator ::
+
+abstract class "factory_method_wea::factory_method_wea.dart::Weather" {
+  +String getWeather()
+}
+
+class "factory_method_wea::factory_method_wea.dart::Sunny" {
+  +String getWeather()
+}
+
+"factory_method_wea::factory_method_wea.dart::Weather" <|-- "factory_method_wea::factory_method_wea.dart::Sunny"
+
+class "factory_method_wea::factory_method_wea.dart::Rainy" {
+  +String getWeather()
+}
+
+"factory_method_wea::factory_method_wea.dart::Weather" <|-- "factory_method_wea::factory_method_wea.dart::Rainy"
+
+abstract class "factory_method_wea::factory_method_wea.dart::WeatherCreator" {
+  +Weather createWeather()
+}
+
+class "factory_method_wea::factory_method_wea.dart::SunnyCreator" {
+  +Sunny createWeather()
+}
+
+"factory_method_wea::factory_method_wea.dart::WeatherCreator" <|-- "factory_method_wea::factory_method_wea.dart::SunnyCreator"
+
+class "factory_method_wea::factory_method_wea.dart::RainyCreator" {
+  +Rainy createWeather()
+}
+
+"factory_method_wea::factory_method_wea.dart::WeatherCreator" <|-- "factory_method_wea::factory_method_wea.dart::RainyCreator"
+
+
+@enduml
